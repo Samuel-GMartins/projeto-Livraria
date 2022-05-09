@@ -1,4 +1,4 @@
-body {
+.page {
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -12,20 +12,9 @@ h2 {
 }
 
 
-.comentario {
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-}
 
 .pesq {
     padding: 20px;
-}
-
-.logg {
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 10px;
 }
 
 a {
@@ -35,6 +24,7 @@ a {
 footer {
     text-align: center;
     font-weight: bold;
+
 }
 
 footer a {
