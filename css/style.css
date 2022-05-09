@@ -11,10 +11,6 @@ h2 {
     color: rgb(165, 108, 42);
 }
 
-.form {
-    padding: 15px;
-    border-radius: 10px;
-}
 
 .comentario {
     text-align: center;
@@ -32,25 +28,7 @@ h2 {
     border-radius: 10px;
 }
 
-.botao {
-    margin-top: 10px;
-    height: 30px;
-    width: 80px;
-    cursor: pointer;
-    background-color: rgb(231, 14, 14);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 12pt;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.55);
-
-}
-
-.botao:hover {
-    background-color: rgb(255, 0, 0);
-}
-
-div a {
+a {
     text-decoration: none;
 }
 
