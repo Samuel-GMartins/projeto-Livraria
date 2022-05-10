@@ -1,5 +1,4 @@
-console.log("testando Js")
-
+// Array Livros com 3 Posições: 0=Título 1=Imagem 2=Sinopse
 var livros = [
     ["Mick", "mick.jpg", "Mick Jagger não exagera ao afirmar que se escrevesse sobre sua vida “em todos os detalhes, as pessoas ficariam aterrorizadas”. Nesta biografia do líder dos Rolling Stones, o jornalista americano Christopher Andersen não poupa fãs e leitores dos detalhes polêmicos e nada glamourosos da trajetória artística e pessoal de um dos astros mais originais do rock contemporâneo."],
 
@@ -9,21 +8,38 @@ var livros = [
 
     ["O pequeno Príncipe", "pequeno-principe.jpg", "Nesta clássica história que marcou gerações de leitores em todo o mundo, um piloto cai com seu avião no deserto do Saara e encontra um pequeno príncipe, que o leva a uma jornada filosófica e poética através de planetas que encerram a solidão humana. A edição conta com a clássica tradução do poeta imortal dom Marcos Barbosa, e é a versão mais consagrada da obra, publicada no Brasil desde 1952."]
 
-]
-console.log(livros)
-
+] // Galeria faz acesso ao elemento div com #galeria
 var galeria = document.querySelector("#galeria")
 
+// Lógica de iteração para consumo do array
 for (var i = 0; i < livros.length; i++) {
-    var img = new Image()
-    img.src = "../imagens/" + livros[i][1]
-    img.width = 120 
-    //galeria.innerHTML += "<h1>" + livros[i][0] + "</h1>" 
-    //galeria.appendChild(img)
-    //galeria.innerHTML += "<P>" + livros[i][2] + "</p>"
 
-    galeria.innerHTML += '<h3 class="col-sm-12">' + livros[i][0] + '</h3>'
-    galeria.innerHTML += '<div class="col-sm-3"><img src="../imagens/' + livros[i][1] + '"class="w-100" /></div>'
-    galeria.innerHTML += '<div class="col-sm-9"><p>' + livros[i][2] + '</p></div>'
+    // Cria um Elemento div principal
+    var div = document.createElement('div');
+
+    // Adiciona a classe com espaço 6
+    div.classList.add('col-sm-6')
+    div.classList.add('mt-5')
+
+    // Cria um elemento div para o Conteudo
+    var conteudo = document.createElement('div')
+
+    //Cria uma classe pra div conteudo com nome row 
+    conteudo.className = 'row'
+
+    //insere o h3 como Título
+    conteudo.innerHTML += '<h3 class="col-sm-12">' + livros[i][0] + '</h3>'
+
+    // Insere a imagem com 100% dentro de uma div espaço 3
+    conteudo.innerHTML += '<div class="col-sm-5"><img src="../imagens/' + livros[i][1] + '"class="w-100" /></div>'
+
+    // Insere um parágrafo com a Sinopse dentro de uma div espaço 9
+    conteudo.innerHTML += '<div class="col-sm-6"><p>' + livros[i][2] + '</p></div>'
+
+    //Div recebe conteudo
+    div.appendChild(conteudo)
+
+    // Galeria recebe div
+    galeria.appendChild(div)
 
 }
