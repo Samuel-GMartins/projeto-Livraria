@@ -5,13 +5,14 @@ var forml = document.forms.formLogin
 document.querySelector("#btlogin").onclick=function(){
     // alert("ok")
     // /input de nome / valor desse campo
-    if (forml.emailLogin.value == ""){
+    if (forml.email.value == ""){
         alert("Preencha o E-mail")
     }
-    else if (forml.passwLogin.value == ""){
+    else if (forml.senha.value == ""){
         alert(" Preencha a Senha")
     }
     else {
         forml.submit();
+        localStorage.emailUser = forml.email.value
     }
 }

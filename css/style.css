@@ -1,7 +1,3 @@
-.page {
-    margin-left: 8%;
-    margin-right: 8%;
-}
 
 h1 {
     color: rgb(212, 26, 26);
@@ -11,8 +7,6 @@ h2 {
     color: rgb(165, 108, 42);
 }
 
-
-
 .pesq {
     padding: 20px;
 }
@@ -21,18 +15,8 @@ a {
     text-decoration: none;
 }
 
-footer {
-    text-align: center;
-    font-weight: bold;
 
-}
-
-footer a {
-    text-decoration: none;
-    text-align: center;
-}
-
-footer a:hover {
+a:hover {
     text-decoration: underline;
     color: red;
 }
